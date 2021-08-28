@@ -14,9 +14,12 @@
     body {
         background-image: url(pattern-background-desktop.svg);
         background-repeat: no-repeat;
+        background-size: contain;
         font-family: 'Red Hat Display';
         display: flex;
         align-items: center;
+        height: 100vh;
+        background-color: hsl(225, 100%, 94%);
     }
 
     .back {
@@ -120,20 +123,25 @@
     {
         color:black;
     }
+    @media(max-width:375px){
+        body{
+            background-image: url(pattern-background-mobile.svg);
+        }
+    }
 </style>
 
 <body>
     <div class="back">
         <img class="image" src="illustration-hero.svg" alt="banner">
         <div class="container">
-            <h1 style="font-weight: 900;">Order Summary</h1>
-            <p>  You can now listen to millions of songs, audiobooks, and podcasts on any 
+            <h1 style="font-weight: 900; color: rgb(70, 70, 70);">Order Summary</h1>
+            <p style="color: rgb(70, 70, 70);">  You can now listen to millions of songs, audiobooks, and podcasts on any 
                 device anywhere you like!</p>
             <div class="innercontainer">
                 <img src="icon-music.svg" alt="icon">
                 <div>
-                    <h3>Annual Plan</h3>
-                    <p>$69.60/year</p>
+                    <h3 style="color: rgb(70, 70, 70);">Annual Plan</h3>
+                    <p style="color: rgb(70, 70, 70);">$69.60/year</p>
                 </div>
                 <button class="button_1">Change</button>
             </div>
